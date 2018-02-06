@@ -26,11 +26,7 @@ export class InformacionService {
 
   private cargaEquipo() {
     this.http.get('https://paginaweb-73e4a.firebaseio.com/equipo.json').subscribe((data: any[]) => {
-
-      for ( let elemento of data ) {
-        this.equipo.push(elemento);
-      }
-
+      this.equipo = data;
       this.cargado_equipo = true;
     });
   }
