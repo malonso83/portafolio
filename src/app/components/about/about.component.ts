@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { InformacionService } from '../../services/informacion.service';
 
 @Component({
   selector: 'app-about',
@@ -6,6 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AboutComponent {
 
-  constructor() { }
+  public equipo: any[] = [];
+
+  constructor(public is: InformacionService) {
+    this.is.getEquipo().subscribe(equipo => this.equipo = equipo );
+  }
 
 }
