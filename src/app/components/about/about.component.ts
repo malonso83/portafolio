@@ -7,10 +7,6 @@ import { InformacionService } from '../../services/informacion.service';
 })
 export class AboutComponent {
 
-  public equipo: any[] = [];
-
-  constructor(public is: InformacionService) {
-    this.is.getEquipo().subscribe(equipo => this.equipo = equipo );
-  }
+  constructor(public is: InformacionService) { }
 
 }
