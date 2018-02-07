@@ -1,7 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import 'rxjs/add/operator/map';
-import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class InformacionService {
@@ -17,14 +15,14 @@ export class InformacionService {
 
   }
 
-  private cargainfo() {
+  private cargainfo(): void {
     this.http.get('/assets/data/info.pagina.json').subscribe(data => {
       this.info = data;
       this.cargado_info = true;
     });
   }
 
-  private cargaEquipo() {
+  private cargaEquipo(): void {
     this.http.get('https://paginaweb-73e4a.firebaseio.com/equipo.json').subscribe((data: any[]) => {
       this.equipo = data;
       this.cargado_equipo = true;
