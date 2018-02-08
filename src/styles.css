@@ -1,5 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 
+.text-center {
+    text-align: center;
+}
+
+.mt-100 {
+    margin-top: 100px;
+}
+
+.p-100 {
+    padding: 100px;
+}
+
 
 /*Animaciones*/
 
@@ -31,4 +43,14 @@
 .fadeIn {
     -webkit-animation-name: fadeIn;
     animation-name: fadeIn;
+}
+
+
+/*
+  Color del Loading
+*/
+
+svg path,
+svg rect {
+    fill: black;
 }

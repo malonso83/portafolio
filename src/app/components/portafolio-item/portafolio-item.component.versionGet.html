@@ -1,14 +1,14 @@
-<section class="ae-container-fluid ae-container-fluid--full" *ngIf="articuloService.articulo_seleccionado">
+<section class="ae-container-fluid ae-container-fluid--full" *ngIf="articulo">
     <header class="rk-portfolio-cover" [ngStyle]="{ 'background-image': 'url(../../assets/productos/'+codigo+'/main.jpg)' }">
         <div class="item-inside__meta">
-            <h1 class="ae-u-bolder rk-portfolio-title ">{{articuloService.articulo_seleccionado.producto}}</h1>
-            <p class="ae-theta rk-portfolio-category ">{{articuloService.articulo_seleccionado.categoria}}</p>
+            <h1 class="ae-u-bolder rk-portfolio-title ">{{articulo.producto}}</h1>
+            <p class="ae-theta rk-portfolio-category ">{{articulo.categoria}}</p>
         </div>
     </header>
     <div class="ae-container-fluid">
         <div class="ae-grid ae-grid--collapse rk-portfolio-info ">
             <div class="ae-grid__item item-lg-8 item-sm--center au-xs-ta-center au-lg-ta-left">
-                <h2 class="rk-portfolio-inner-title ">{{articuloService.articulo_seleccionado.producto}}</h2>
+                <h2 class="rk-portfolio-inner-title ">{{articulo.producto}}</h2>
             </div>
             <div class="ae-grid__item item-lg-4 au-xs-ta-center au-lg-ta-right rk-portfolio-details">
                 <p class="rk-portfolio-inner-client "><span class="ae-lambda">Client: </span><span class="ae-u-bolder">{{is.info.nombre_largo}}</span></p>
@@ -21,25 +21,25 @@
         <div class="ae-grid ae-grid--collapse au-xs-ptp-1">
             <div class="ae-grid__item item-lg-5 au-lg-ptp-1">
                 <h4 class="ae-u-bolder">Descripción</h4>
-                <p class="ae-eta">{{articuloService.articulo_seleccionado.desc1}}</p>
+                <p class="ae-eta">{{articulo.desc1}}</p>
             </div>
-            <div class="ae-grid__item item-lg-6 item-lg--offset-1"><img [src]="'pic-1' | imagenArticulo:codigo" [alt]="articuloService.articulo_seleccionado.subtitulo1"></div>
+            <div class="ae-grid__item item-lg-6 item-lg--offset-1"><img [src]="'pic-1' | imagenArticulo:codigo" [alt]="articulo.subtitulo1"></div>
         </div>
         <div class="ae-grid ae-grid--collapse">
-            <div class="ae-grid__item item-lg-8"><img [src]="'pic-2' | imagenArticulo:codigo" [alt]="articuloService.articulo_seleccionado.subtitulo2"></div>
+            <div class="ae-grid__item item-lg-8"><img [src]="'pic-2' | imagenArticulo:codigo" [alt]="articulo.subtitulo2"></div>
             <div class="ae-grid__item item-lg-3 item-lg--offset-1 au-lg-ptp-1">
-                <p class="au-mb-3">{{articuloService.articulo_seleccionado.desc2}}</p>
+                <p class="au-mb-3">{{articulo.desc2}}</p>
                 <p class="ae-u-bolder">Descripción</p>
             </div>
         </div>
         <div class="ae-grid ae-grid--collapse au-xs-ptp-1 au-xs-pbp-1">
             <div class="ae-grid__item item-lg-8 item-lg--offset-2">
                 <h4 class="ae-u-bolder">Resumen</h4>
-                <p class="ae-eta">{{articuloService.articulo_seleccionado.resumen}}</p>
+                <p class="ae-eta">{{articulo.resumen}}</p>
             </div>
         </div>
         <div class="ae-grid ae-grid--collapse">
-            <div class="ae-grid__item item-lg--auto"><img [src]="'main' | imagenArticulo:codigo" [alt]="articuloService.articulo_seleccionado.subtitulo1"></div>
+            <div class="ae-grid__item item-lg--auto"><img [src]="'main' | imagenArticulo:codigo" [alt]="articulo.subtitulo1"></div>
         </div>
     </div>
 </section>
