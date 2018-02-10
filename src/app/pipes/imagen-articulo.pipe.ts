@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class ImagenArticuloPipe implements PipeTransform {
 
   transform(value: string, codigo: string): string {
-    const url: string = '../../assets/productos/' + codigo + '/' +  value + '.jpg';
+    const url: string = './assets/productos/' + codigo + '/' +  value + '.jpg';
     return url;
   }
 
